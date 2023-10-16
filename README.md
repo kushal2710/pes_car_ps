@@ -34,3 +34,16 @@ or gtkwave dump.vcd
 ```
 
 ![gtkwave-3](https://github.com/kushal2710/pes_car_ps/assets/115935208/a666b62b-1f97-4435-9891-c91b3ca733ce)
+
+### RISC-V
+
+<details>
+<summary>DAY-3 : Digital Logic with TL-Verilog in Makerchip IDE</summary>
+<br>
+
+## Task-1 : Logic Gates
+![image](https://github.com/kushal2710/pes_car_ps/assets/115935208/c7c5d152-e613-4aa0-a0ec-088139c8d146)
+
+
+
+
