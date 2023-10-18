@@ -260,6 +260,7 @@ $out[31:0] = $op[1] ? ($op[0] ? $qut: $prod): ($op [0] ? $diff: $sum);
 <details>
 <summary>DAY-4 :Basic RISC-V CPU Microarchitecture</summary>
 <br>
+
 #### Program Counter
 ```
 |cpu
@@ -268,7 +269,9 @@ $out[31:0] = $op[1] ? ($op[0] ? $qut: $prod): ($op [0] ? $diff: $sum);
        $pc[31:0] = >>1$reset ? 32'b0 :
                                >>1$pc + 32'd4;
 ```
+
 ![ss-31](https://github.com/kushal2710/pes_car_ps/assets/115935208/92f3eae9-df15-4beb-b972-dec5ffa55917)
+
 #### Instruction Fetch
 ```
 |cpu
@@ -290,10 +293,12 @@ $out[31:0] = $op[1] ? ($op[0] ? $qut: $prod): ($op [0] ? $diff: $sum);
       m4+imem(@1)    // Args: (read stage)
       m4+rf(@1, @1)  // Args: (read stage, write stage) - if equal, no register bypass is required
 ```
+
 ![ss-32](https://github.com/kushal2710/pes_car_ps/assets/115935208/2dd43825-f602-4088-9e44-9516da240fd3)
 ![ss-33](https://github.com/kushal2710/pes_car_ps/assets/115935208/40dbb3d1-2a3a-4bf1-9c4e-ab56cf57cab0)
 ![ss-34](https://github.com/kushal2710/pes_car_ps/assets/115935208/9a33569a-4d89-4e40-9db3-8501cbccc456)
 ![ss-35](https://github.com/kushal2710/pes_car_ps/assets/115935208/1bca84dd-fda9-4df7-8526-a7c5db68ae46)
+
 #### Instruction Decode
 ```
 |cpu
@@ -337,8 +342,10 @@ $out[31:0] = $op[1] ? ($op[0] ? $qut: $prod): ($op [0] ? $diff: $sum);
       m4+imem(@1)    // Args: (read stage)
       m4+rf(@1, @1)  // Args: (read stage, write stage) - if equal, no register bypass is required
 ```
+
 ![ss-36](https://github.com/kushal2710/pes_car_ps/assets/115935208/9e1c7949-029f-4dcb-90d7-90e5b41ba15f)
 ![ss-37](https://github.com/kushal2710/pes_car_ps/assets/115935208/2e9f8d39-d1b9-4e2e-8ba8-44017f447d8b)
+
 #### Instruction Decode with Validity
 ```
 |cpu
@@ -392,8 +399,10 @@ $out[31:0] = $op[1] ? ($op[0] ? $qut: $prod): ($op [0] ? $diff: $sum);
       m4+imem(@1)    // Args: (read stage)
       m4+rf(@1, @1)  // Args: (read stage, write stage) - if equal, no register bypass is required
 ```
+
 ![ss-38](https://github.com/kushal2710/pes_car_ps/assets/115935208/9459b84b-3651-4524-aaa0-a67d5b4b51ea)
 ![ss-39](https://github.com/kushal2710/pes_car_ps/assets/115935208/3c817ec9-871c-4376-adda-9b1c77064a9c)
+
 #### Individual Instruction decode
 ```
 |cpu
@@ -456,8 +465,10 @@ $out[31:0] = $op[1] ? ($op[0] ? $qut: $prod): ($op [0] ? $diff: $sum);
       m4+imem(@1)    // Args: (read stage)
       m4+rf(@1, @1)  // Args: (read stage, write stage) - if equal, no register bypass is required
 ```
+
 ![ss-40](https://github.com/kushal2710/pes_car_ps/assets/115935208/36aebe6c-013a-48cf-829a-fde38e72c0a8)
 ![ss-41](https://github.com/kushal2710/pes_car_ps/assets/115935208/fd16f70c-d910-4ea9-b944-e2096126ed58)
+
 #### Register File
 ```
 |cpu
@@ -540,8 +551,10 @@ $out[31:0] = $op[1] ? ($op[0] ? $qut: $prod): ($op [0] ? $diff: $sum);
       m4+rf(@1, @1)  // Args: (read stage, write stage) - if equal, no register bypass is required
       m4+cpu_viz(@4)    // For visualisation
 ```
+
 ![ss-42](https://github.com/kushal2710/pes_car_ps/assets/115935208/a2516350-bf2f-4d17-a1d4-de8295b25137)
 ![ss-43](https://github.com/kushal2710/pes_car_ps/assets/115935208/e812d2f6-6b43-4997-9ba3-f1defb981703)
+
 #### ALU
 ```
 |cpu
@@ -627,9 +640,11 @@ $out[31:0] = $op[1] ? ($op[0] ? $qut: $prod): ($op [0] ? $diff: $sum);
       m4+rf(@1, @1)  // Args: (read stage, write stage) - if equal, no register bypass is required
       m4+cpu_viz(@4)    // For visualisation
 ```
+
 ![ss-44](https://github.com/kushal2710/pes_car_ps/assets/115935208/78e4193e-e138-4ad1-a132-9c6857ce0c41)
 ![ss-45](https://github.com/kushal2710/pes_car_ps/assets/115935208/eaff02e6-20e3-427b-ba66-66f53c247705)
-#### Register File write
+
+ #### Register File write
 ```
 |cpu
       @0
@@ -714,9 +729,12 @@ $out[31:0] = $op[1] ? ($op[0] ? $qut: $prod): ($op [0] ? $diff: $sum);
       m4+rf(@1, @1)  // Args: (read stage, write stage) - if equal, no register bypass is required
       m4+cpu_viz(@4)    // For visualisation
 ```
-![ss-46](https://github.com/kushal2710/pes_car_ps/assets/115935208/f31c89f3-e828-4332-b40c-69dd388d4b01)
-![ss-47](https://github.com/kushal2710/pes_car_ps/assets/115935208/b05ca04d-780e-4c06-8be6-97a0ddcbe936)
-#### Branch Instruction
+
+ 
+ ![ss-46](https://github.com/kushal2710/pes_car_ps/assets/115935208/f31c89f3-e828-4332-b40c-69dd388d4b01)
+ ![ss-47](https://github.com/kushal2710/pes_car_ps/assets/115935208/b05ca04d-780e-4c06-8be6-97a0ddcbe936)
+
+ #### Branch Instruction
 ```
 |cpu
       @0
@@ -810,9 +828,12 @@ $out[31:0] = $op[1] ? ($op[0] ? $qut: $prod): ($op [0] ? $diff: $sum);
       m4+rf(@1, @1)  // Args: (read stage, write stage) - if equal, no register bypass is required
       m4+cpu_viz(@4)    // For visualisation
 ```
-![ss-48](https://github.com/kushal2710/pes_car_ps/assets/115935208/9b15421c-fb3d-47fc-85f8-c7477a3c7e5f)
+
+[ss-48](https://github.com/kushal2710/pes_car_ps/assets/115935208/9b15421c-fb3d-47fc-85f8-c7477a3c7e5f)
 ![ss-49](https://github.com/kushal2710/pes_car_ps/assets/115935208/a00d2abc-4b0e-4c6f-83c8-c7b1bb2401e9)
+
 #### Testbench
+
 ![ss-50](https://github.com/kushal2710/pes_car_ps/assets/115935208/c09fab4e-f07b-433a-a0d9-24d4efd06784)
 ![ss-51](https://github.com/kushal2710/pes_car_ps/assets/115935208/5b6ee92e-3dba-4b62-8a19-b3de775a486b)
 ![ss-52](https://github.com/kushal2710/pes_car_ps/assets/115935208/5828a1ee-4820-4840-af8f-4b9aaf4a26a9)
