@@ -93,7 +93,7 @@ or gtkwave dump.vcd
 
 Create a new folder within OpenLane with the same name as your design file `pes_car_ps`.
 
-Note `pes_car_ps` folder should have [config.json]https://github.com/kushal2710/pes_car_ps/blob/main/config.json `pes_car_ps.v` and the `src` folder.
+Note `pes_car_ps` folder should have [config.json](https://github.com/kushal2710/pes_car_ps/blob/main/config.json) `pes_car_ps.v` and the `src` folder.
 
 Make sure `src` folder should have these [Files]
 
