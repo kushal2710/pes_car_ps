@@ -1,3 +1,4 @@
+![Screenshot from 2023-11-01 19-30-15](https://github.com/kushal2710/pes_car_ps/assets/115935208/1982f935-6f1e-4acc-8fc4-c5a244c202af)
 # pes_car_ps
  car parking system using a finite state machine (FSM). The system has inputs for sensors at the entrance and exit of the parking lot, as well as a password input consisting of two bits each. It controls two LEDs (a green one and a red one) to indicate the system's state, and it also displays characters on two 7-segment displays (HEX_1 and HEX_2) to show information. this Verilog code describes a car parking system with different states and transitions controlled by sensors and a password input. It also controls LEDs and 7-segment displays to provide visual feedback on the system's state. The behavior of the system is defined by the state machine logic and the conditions specified in the code.
  ### Simulation
@@ -84,10 +85,24 @@ or gtkwave dump.vcd
    2. **Netgen** - Netgen is an open-source digital netlist comparison and LVS (Layout vs. Schematic) tool.
 
 [Back to Stage-2](#Stage-2)
-
 </details>
 
-<details>[Back to Stage-2](#Stage-2)
+<details>
+<summary>Creating folder and adding files</summary>
+<br>
+
+
+Create a new folder within OpenLane with the same name as your design file `pes_car_ps`.
+
+Note `pes_car_ps` folder should have [config.json](https://github.com/kushal2710/pes_car_ps/blob/main/config.json) `pes_car_ps.v` and the `src` folder.
+
+Make sure `src` folder should have these [Files](https://github.com/kushal2710/pes_car_ps/blob/main/sky130_fd_sc_hd__fast.lib)
+
+The `pdks` folder must have this [File](https://github.com/kushal2710/pes_car_ps/blob/main/sky130_fd_sc_hd.v)
+
+![Screenshot from 2023-11-02 17-32-56](https://github.com/kushal2710/pes_car_ps/assets/115935208/304f64dc-f688-4e89-98aa-a81d2a399a24)
+
+[Back to Stage-2](#Stage-2)
 </details>
 
 <details>
@@ -106,19 +121,6 @@ prep -design pes_car_ps
 
 ![Screenshot from 2023-11-01 18-51-50](https://github.com/kushal2710/pes_car_ps/assets/115935208/d999be75-3338-4390-8bf2-ebeec74d6922)
 
-
-Create a new folder within OpenLane with the same name as your design file `pes_car_ps`.
-
-Note `pes_car_ps` folder should have [config.json](https://github.com/kushal2710/pes_car_ps/blob/main/config.json) `pes_car_ps.v` and the `src` folder.
-
-Make sure `src` folder should have these [Files](https://github.com/kushal2710/pes_car_ps/blob/main/sky130_fd_sc_hd__fast.lib)
-
-The `pdks` folder must have this [File](https://github.com/kushal2710/pes_car_ps/blob/main/sky130_fd_sc_hd.v)
-
-![Screenshot from 2023-11-02 17-32-56](https://github.com/kushal2710/pes_car_ps/assets/115935208/304f64dc-f688-4e89-98aa-a81d2a399a24)
-
-[Back to Stage-2](#Stage-2)
-</details>
 
 <details>
 <summary>Synthesis,Floorplan,Placement,CTS,Routing</summary>
@@ -165,6 +167,42 @@ run_placement
 + Command to exectue
 ```
 run_cts
+
+```
+
+![Screenshot from 2023-11-01 19-30-15](https://github.com/kushal2710/pes_car_ps/assets/115935208/fe15e523-921a-4236-98bd-adc8459d613f)
+
+**The reports generated are given below , after executing run_cts command**
+
+![Screenshot from 2023-11-01 19-34-13](https://github.com/kushal2710/pes_car_ps/assets/115935208/d9965adc-34be-4f00-a5e3-38c1c54b2324)
+
+![Screenshot from 2023-11-01 19-35-38](https://github.com/kushal2710/pes_car_ps/assets/115935208/5af220f3-8426-470a-9a75-8caa494db15b)
+
+![Screenshot from 2023-11-01 19-39-26](https://github.com/kushal2710/pes_car_ps/assets/115935208/a2e17e57-c269-46a2-a937-dbc4f7b3e725)
+
+
+**Routing**
++ Command to exectue
+```
+run_routing
+```
+
+![Screenshot from 2023-11-01 19-41-20](https://github.com/kushal2710/pes_car_ps/assets/115935208/4f865348-bcdc-4df7-8b0a-ab50186efb3b)
+
+
+```
+magic -T /home/kushal/OpenLane/pdks/sky130A/sky130A/libs.tech/magic/sky130A.tech lef read ../../tmp/merged.nom.lef def pes_binary_to_gray_converter.def &
+```
+![Screenshot from 2023-11-01 19-46-38](https://github.com/kushal2710/pes_car_ps/assets/115935208/fecf0a97-baa6-4cc4-95ba-93371db58ef6)
+
+[Back to Stage-2](#Stage-2)
+</details>
+
+
+
+
+
+
 
 
 
