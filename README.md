@@ -95,9 +95,9 @@ Create a new folder within OpenLane with the same name as your design file `pes_
 
 Note `pes_car_ps` folder should have [config.json](https://github.com/kushal2710/pes_car_ps/blob/main/config.json) `pes_car_ps.v` and the `src` folder.
 
-Make sure `src` folder should have these [Files]
+Make sure `src` folder should have these [Files](https://github.com/kushal2710/pes_car_ps/blob/main/sky130_fd_sc_hd__fast.lib)
 
-The `pdks` folder must have this [File]
+The `pdks` folder must have this [File](https://github.com/kushal2710/pes_car_ps/blob/main/sky130_fd_sc_hd.v)
 
 
 
