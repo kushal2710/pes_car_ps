@@ -87,9 +87,25 @@ or gtkwave dump.vcd
 
 </details>
 
+<details>[Back to Stage-2](#Stage-2)
+</details>
+
 <details>
-<summary>Creating folder and adding files</summary>
+<summary>Interactive OpenLane flow</summary>
 <br>
+
+Open terminal and type the following commands.
+```
+cd OpenLane/ 
+make mount 
+./flow.tcl -interactive
+package require openlane 0.9
+prep -design pes_car_ps
+```
+<br>
+
+![Screenshot from 2023-11-01 18-51-50](https://github.com/kushal2710/pes_car_ps/assets/115935208/d999be75-3338-4390-8bf2-ebeec74d6922)
+
 
 Create a new folder within OpenLane with the same name as your design file `pes_car_ps`.
 
@@ -98,6 +114,69 @@ Note `pes_car_ps` folder should have [config.json](https://github.com/kushal2710
 Make sure `src` folder should have these [Files](https://github.com/kushal2710/pes_car_ps/blob/main/sky130_fd_sc_hd__fast.lib)
 
 The `pdks` folder must have this [File](https://github.com/kushal2710/pes_car_ps/blob/main/sky130_fd_sc_hd.v)
+
+![Screenshot from 2023-11-02 17-32-56](https://github.com/kushal2710/pes_car_ps/assets/115935208/304f64dc-f688-4e89-98aa-a81d2a399a24)
+
+[Back to Stage-2](#Stage-2)
+</details>
+
+<details>
+<summary>Synthesis,Floorplan,Placement,CTS,Routing</summary>
+<br>
+
+**Synthesis**
++ Command to exectue
+```
+run_synthesis
+```
+
+![Screenshot from 2023-11-01 18-59-40](https://github.com/kushal2710/pes_car_ps/assets/115935208/6c4ebac9-20b0-49c6-be57-03f5e42b81b5)
+
+**Floorplan**
++ Command to exectue
+```
+run_floorplan
+```
+
+![Screenshot from 2023-11-01 19-01-52](https://github.com/kushal2710/pes_car_ps/assets/115935208/217b45f1-e3e1-4699-b0b0-68f0f5c19c77)
+
+![Screenshot from 2023-11-01 19-14-43](https://github.com/kushal2710/pes_car_ps/assets/115935208/90524743-4b3e-4540-b2bb-9186c085210d)
+
+**Note we need to use libs.tech file so we need to gitclone this https://github.com/hwiiiii/sky130A into pdks folder**
+```
+git clone https://github.com/hwiiiii/sky130A
+```
+
+```
+magic -T /home/kushal/OpenLane/pdks/sky130A/sky130A/libs.tech/magic/sky130A.tech lef read ../../tmp/merged.nom.lef def pes_binary_to_gray_converter.def &
+```
+
+**Placement**
++ Command to exectue
+```
+run_placement
+```
+
+![Screenshot from 2023-11-01 19-20-51](https://github.com/kushal2710/pes_car_ps/assets/115935208/f2dfe39a-3954-4cf0-8beb-609d58fa21e9)
+
+![Screenshot from 2023-11-01 19-26-10](https://github.com/kushal2710/pes_car_ps/assets/115935208/0ad4853f-a74e-4a94-bcfa-e645fd4feec1)
+
+**CTS**
++ Command to exectue
+```
+run_cts
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
